@@ -1,11 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import Hero from '../components/Hero';
+import Experience from '../components/Experience';
+import Education from '../components/Education';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
+import Navigation from '../components/Navigation';
 
 const Index = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="flex flex-col lg:flex-row min-h-screen">
+        {/* Left section - Fixed on desktop */}
+        <div className="lg:w-1/2 lg:fixed lg:h-screen flex items-center justify-center p-8 bg-gradient-to-br from-gray-800 to-gray-900">
+          <Hero />
+        </div>
+        
+        {/* Right section - Scrollable */}
+        <div className="lg:w-1/2 lg:ml-[50%] relative">
+          <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
+          
+          <div className="space-y-0">
+            <section id="experience" className="min-h-screen p-8 lg:p-12">
+              <Experience />
+            </section>
+            
+            <section id="education" className="min-h-screen p-8 lg:p-12 bg-gray-800/30">
+              <Education />
+            </section>
+            
+            <section id="projects" className="min-h-screen p-8 lg:p-12">
+              <Projects />
+            </section>
+            
+            <section id="contact" className="min-h-screen p-8 lg:p-12 bg-gray-800/30">
+              <Contact />
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   );
