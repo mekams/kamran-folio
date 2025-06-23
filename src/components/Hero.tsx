@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:kamran@example.com';
+    window.location.href = 'mailto:kamraneg@gmail.com';
   };
 
   const handleDownloadCV = () => {
@@ -58,7 +58,7 @@ const Hero = () => {
       {/* Social Media Links */}
       <div className="flex justify-center gap-3 mb-6">
         <a 
-          href="https://github.com/kamranmustafa" 
+          href="https://github.com/mekams" 
           target="_blank" 
           rel="noopener noreferrer"
           className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
@@ -66,7 +66,7 @@ const Hero = () => {
           <Github className="w-4 h-4 group-hover:text-blue-400 transition-colors" />
         </a>
         <a 
-          href="https://linkedin.com/in/kamranmustafa" 
+          href="https://linkedin.com/in/kamran51" 
           target="_blank" 
           rel="noopener noreferrer"
           className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
@@ -83,7 +83,7 @@ const Hero = () => {
             onClick={handleEmail}
             className="hover:text-blue-400 transition-colors text-xs"
           >
-            kamran@example.com
+            kamraneg@gmail.com
           </button>
         </div>
         <div className="flex items-center justify-center gap-2 text-gray-300">
