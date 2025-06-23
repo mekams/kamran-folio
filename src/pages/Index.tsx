@@ -13,13 +13,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <div className="flex flex-col lg:flex-row min-h-screen">
-        {/* Left section - Fixed on desktop */}
-        <div className="lg:w-1/2 lg:fixed lg:h-screen flex items-center justify-center p-4 lg:p-8 bg-gradient-to-br from-gray-800 to-gray-900">
+        {/* Left section - Fixed on desktop, more compact */}
+        <div className="lg:w-2/5 lg:fixed lg:h-screen flex items-center justify-center p-3 lg:p-4 bg-gradient-to-br from-gray-800 to-gray-900 overflow-y-auto">
           <Hero />
         </div>
         
-        {/* Right section - Scrollable */}
-        <div className="lg:w-1/2 lg:ml-[50%] relative">
+        {/* Right section - Scrollable, more space */}
+        <div className="lg:w-3/5 lg:ml-[40%] relative">
           <Navigation activeSection={activeSection} setActiveSection={setActiveSection} />
           
           <div className="space-y-0">
