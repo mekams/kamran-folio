@@ -1,19 +1,39 @@
-
 import { Github, Linkedin, Mail, Phone, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const titles = [
+    'Full-Stack Developer',
+    'Software Engineer',
+    'AI Engineer',
+    'Problem Solver',
+    'Tech Enthusiast'
+  ];
+
+  const colors = [
+    'text-green-400'
+  ];
+
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const titles = ['Full-Stack Developer', 'Software Engineer', 'AI Engineer', 'Problem Solver', 'Tech Enthusiast'];
+  const [displayedLetters, setDisplayedLetters] = useState(0);
 
+  // Typewriter effect for each title
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 3000); // Change title every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [titles.length]);
+    if (displayedLetters < titles[currentTitleIndex].length) {
+      const timeout = setTimeout(() => {
+        setDisplayedLetters(displayedLetters + 1);
+      }, 70);
+      return () => clearTimeout(timeout);
+    } else {
+      // Wait before moving to next title
+      const timeout = setTimeout(() => {
+        setDisplayedLetters(0);
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      }, 1500);
+      return () => clearTimeout(timeout);
+    }
+  }, [displayedLetters, currentTitleIndex, titles]);
 
   const handleCall = () => {
     window.location.href = 'tel:+447869128971';
@@ -24,7 +44,6 @@ const Hero = () => {
   };
 
   const handleDownloadCV = () => {
-    // Replace with actual CV file path
     const cvUrl = '/path-to-your-cv.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
@@ -55,7 +74,15 @@ const Hero = () => {
             I'm Kamran Mustafa,
           </h1>
           <h2 className="rotating-title text-2xl font-bold text-gray-300 mb-1 min-h-[24px] transition-all duration-500 ease-in-out">
-            {titles[currentTitleIndex]},
+            {titles[currentTitleIndex]
+              .slice(0, displayedLetters)
+              .split('')
+              .map((char, idx) => (
+                <span key={idx} className={colors[idx % colors.length]}>
+                  {char}
+                </span>
+              ))}
+            <span className="animate-pulse text-blue-400">|</span>
           </h2>
           <h3 className="text-xl font-bold text-gray-400 mb-2">
             United Kingdom
