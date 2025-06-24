@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
-  const titles = ['Full-Stack Developer', 'Software Engineer', 'Web Developer', 'Problem Solver', 'Tech Enthusiast'];
+  const titles = ['Full-Stack Developer', 'Software Engineer', 'AI Engineer', 'Problem Solver', 'Tech Enthusiast'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,48 +35,48 @@ const Hero = () => {
   return (
     <div className="hero-container h-full flex items-center justify-center p-4">
       <div className="hero-card bg-gray-800/40 backdrop-blur-sm rounded-3xl border border-gray-700/50 shadow-2xl p-8 max-w-sm w-full text-center">
-        <div className="mb-6">
-          <div className="relative mx-auto mb-4 w-32 h-32">
+        <div className="mb-2">
+          <div className="relative mx-auto mb-3 w-88 h-88">
             <img 
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80"
+              src="../../assets/20240315_124547-c.jpg"
               alt="Profile"
-              className="w-full h-full rounded-full object-cover border-3 border-blue-500/30 shadow-xl"
+              className="w-full h-full rounded-full object-cover border-3 border-blue-500/30 shadow-xl animate-pulse transition-transform transform hover:scale-62 hover:shadow-2xl"
             />
           </div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-lg mb-1">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             Available for work
           </div>
         </div>
         
-        <div className="mb-6">
-          <div className="text-xl mb-2">👋 Say Hello,</div>
-          <h1 className="text-xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
+        <div className="mb-2">
+          <div className="text-xl font-bold mb-1">👋 Say Hello,</div>
+          <h1 className="text-2xl font-bold mb-1 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
             I'm Kamran Mustafa,
           </h1>
-          <h2 className="rotating-title text-base font-bold text-gray-300 mb-1 min-h-[24px] transition-all duration-500 ease-in-out">
+          <h2 className="rotating-title text-2xl font-bold text-gray-300 mb-1 min-h-[24px] transition-all duration-500 ease-in-out">
             {titles[currentTitleIndex]},
           </h2>
-          <h3 className="text-sm text-gray-400 mb-4">
-            From United Kingdom
+          <h3 className="text-xl font-bold text-gray-400 mb-2">
+            United Kingdom
           </h3>
         </div>
         
-        <p className="text-gray-300 leading-relaxed mb-6 text-xs">
+        <p className="text-gray-400 leading-relaxed mb-2 text-xs font-semibold">
           Computer Science graduate with 2+ years of hands-on experience in software and web development, 
           working with modern technologies in Linux environments. Currently growing a strong interest in 
           real-world AI applications.
         </p>
 
         {/* Social Media Links */}
-        <div className="flex justify-center gap-3 mb-6">
+        <div className="flex justify-center gap-3 mb-2">
           <a 
             href="https://github.com/mekams" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
           >
-            <Github className="w-4 h-4 group-hover:text-blue-400 transition-colors" />
+            <Github className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
           </a>
           <a 
             href="https://linkedin.com/in/kamran51" 
@@ -84,12 +84,12 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
           >
-            <Linkedin className="w-4 h-4 group-hover:text-blue-400 transition-colors" />
+            <Linkedin className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
           </a>
         </div>
 
         {/* Contact Information */}
-        <div className="mb-6 space-y-2">
+        <div className="mb-2 space-y-1 font-semibold">
           <div className="flex items-center justify-center gap-2 text-gray-300">
             <Mail className="w-3 h-3 text-blue-400" />
             <button 
@@ -110,17 +110,17 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="flex flex-col gap-2 justify-center">
+        <div className="flex flex-row gap-2 justify-center">
           <Button 
             onClick={handleEmail}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-xs w-full"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-xs w-auto"
           >
             Contact Me
           </Button>
           <Button 
             onClick={handleDownloadCV}
             variant="outline" 
-            className="border-gray-600 text-gray-300 hover:bg-gray-800 px-4 py-2 text-xs w-full"
+            className="border-gray-600 text-gray-300 hover:bg-gray-800 px-4 py-2 text-xs w-auto"
           >
             <Download className="w-3 h-3 mr-2" />
             Download CV
