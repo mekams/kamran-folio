@@ -44,7 +44,7 @@ const Hero = () => {
   };
 
   const handleDownloadCV = () => {
-    const cvUrl = '/path-to-your-cv.pdf';
+    const cvUrl = '../assets/Kamran_IT_Resume.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'Kamran_Mustafa_CV.pdf';
@@ -101,17 +101,23 @@ const Hero = () => {
             href="https://github.com/mekams" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
+            className="relative group p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
           >
             <Github className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
+            <span className="absolute left-1/2 -translate-x-1/2 top-10 opacity-0 group-hover:opacity-100 bg-gray-900 text-xs text-white px-2 py-1 rounded shadow transition-opacity pointer-events-none z-10">
+              GitHub
+            </span>
           </a>
           <a 
             href="https://linkedin.com/in/kamran51" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors group"
+            className="relative group p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
           >
             <Linkedin className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
+            <span className="absolute left-1/2 -translate-x-1/2 top-10 opacity-0 group-hover:opacity-100 bg-gray-900 text-xs text-white px-2 py-1 rounded shadow transition-opacity pointer-events-none z-10">
+              LinkedIn
+            </span>
           </a>
         </div>
 
