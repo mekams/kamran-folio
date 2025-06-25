@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, MapPin, Award, Paintbrush, Code2 } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Award, Paintbrush, Code2, Server, BrainCircuit, FlaskConical, CloudCog } from 'lucide-react';
 
 const Education = () => {
   const education = [
@@ -37,17 +37,71 @@ const Education = () => {
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
     },
     {
-      category: "Front-end development",
+      category: "Frontend",
       icon: <Code2 className="w-6 h-6 text-blue-400" />, // Lucide icon
       technologies: [
-        { name: "HTML", image: "/assets/html-5.png" },
-        { name: "CSS", image: "/assets/css.png" },
+        { name: "JavaScript", image: "/assets/js.png" },
         { name: "React", image: "/assets/react.png" },
-        { name: "Vue", image: "/assets/vue.png" },
-        { name: "JavaScript", image: "/assets/js.png" }
+        { name: "Micro Frontends", image: "/assets/mf.png" },
+        { name: "Vue.js", image: "/assets/vuejs.svg" },
+        { name: "Next.Js", image: "/assets/nextjs.jpeg" },
       ],
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
-    }
+    },
+    {
+      category: "Backend | Database",
+      icon: <Server className="w-6 h-6 text-slate-400" />, // Lucide icon
+      technologies: [
+        { name: "NodeJs", image: "/assets/nd.png" },
+        { name: "ExpressJs", image: "/assets/express.png" },
+        { name: "MongoDb", image: "/assets/md.png" },
+        { name: "MySQL", image: "/assets/ms.png" },
+        { name: "PostgreSQL", image: "/assets/ps.png" },
+      ],
+      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+    },
+    {
+      category: "AI & Data Science",
+      icon: <BrainCircuit className="w-6 h-6 text-cyan-400" />, // Lucide icon
+      technologies: [
+        { name: "Python", image: "/assets/py.png" },
+        { name: "LLM", image: "/assets/llm.jpg" },
+        { name: "NLP", image: "/assets/nlp.png" },
+        { name: "Scikit-Learn", image: "/assets/sk.png" },
+        { name: "AI Agents", image: "/assets/aig.png" },
+        { name: "Pandas", image: "/assets/pd.png" },
+        { name: "NumPy", image: "/assets/np.png" },
+        { name: "Matplotlib", image: "/assets/mt.png" },
+        { name: "Seaborn", image: "/assets/sb.png" },
+      ],
+      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+    },
+    {
+      category: "Testing & Methodologies",
+      icon: <FlaskConical className="w-6 h-6 text-red-400" />, // Lucide icon
+      technologies: [
+        { name: "React Testing Library", image: "/assets/rtl.png" },
+        { name: "Jest", image: "/assets/jt.png" },
+        { name: "Jira", image: "/assets/jr.jpeg" },
+        { name: "Agile & Scrum Workflows", image: "/assets/asw.png" }
+      ],
+      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+    },
+    {
+      category: "Cloud & DevOps (Familiar)",
+      icon: <CloudCog className="w-6 h-6 text-indigo-400" />, // Lucide icon
+      technologies: [
+        { name: "GitHub", image: "/assets/git.png" },
+        { name: "Docker", image: "/assets/doc.png" },
+        { name: "Kubernetes", image: "/assets/kb.png" },
+        { name: "AWS", image: "/assets/aws.png" },
+        { name: "Vercel", image: "/assets/vl.png" },
+        { name: "Netlify", image: "/assets/ny.png" },
+        { name: "CI/CD", image: "/assets/cid.webp" },
+        { name: "Jenkins", image: "/assets/jk.png" },
+      ],
+      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+    },
   ];
 
   return (
@@ -111,12 +165,12 @@ const Education = () => {
               {skill.icon}
               {skill.category}
             </h4>
-            <p className="text-gray-300 mb-6 leading-relaxed">{skill.description}</p>
+            <p className="text-gray-300 mb-2 leading-relaxed">{skill.description}</p>
             <div className="flex flex-wrap gap-2">
               {skill.technologies.map((tech, idx) => (
                 <span 
                   key={idx}
-                  className="flex items-center gap-2 px-3 py-1 bg-emerald-600/10 text-green-400/40 rounded-full text-sm border border-blue-600/30"
+                  className="flex items-center gap-2 px-3 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-sm border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-900 hover:text-green-300 hover:shadow-lg"
                 >
                   {tech.image && (
                     <img
