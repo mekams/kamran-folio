@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Contact, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect, useMemo } from 'react';
 
@@ -146,14 +146,15 @@ const Hero = () => {
         <div className="flex flex-row gap-2 justify-center">
           <Button 
             onClick={handleEmail}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-xs w-auto"
+            className="bg-emerald-600 hover:bg-green-600 text-white px-4 py-2 text-xs w-auto"
           >
+            <Contact className="w-3 h-3 mr-2" />
             Contact Me
           </Button>
           <Button 
             onClick={handleDownloadCV}
             variant="outline" 
-            className="border-gray-600 text-gray-300 hover:bg-gray-800 px-4 py-2 text-xs w-auto"
+            className="bg-black-900 border-gray-600 text-black-300 hover:bg-green-500 px-4 py-2 text-xs w-auto"
           >
             <Download className="w-3 h-3 mr-2" />
             Download CV

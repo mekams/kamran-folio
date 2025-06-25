@@ -1,5 +1,5 @@
 
-import { Home, Briefcase, GraduationCap, FolderOpen, Mail } from 'lucide-react';
+import { Home, Briefcase, GraduationCap, Code, Contact } from 'lucide-react';
 
 interface NavigationProps {
   activeSection: string;
@@ -8,11 +8,11 @@ interface NavigationProps {
 
 const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
   const navItems = [
-    { id: 'home', icon: Home, label: 'Home' },
+    // { id: 'home', icon: Home, label: 'Home' },
     { id: 'experience', icon: Briefcase, label: 'Experience' },
     { id: 'education', icon: GraduationCap, label: 'Education' },
-    { id: 'projects', icon: FolderOpen, label: 'Projects' },
-    { id: 'contact', icon: Mail, label: 'Contact' }
+    { id: 'projects', icon: Code, label: 'Projects' },
+    { id: 'contact', icon: Contact, label: 'Contact' }
   ];
 
   const handleNavClick = (sectionId: string) => {

@@ -1,4 +1,3 @@
-
 import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
 
 const Education = () => {
@@ -7,17 +6,17 @@ const Education = () => {
       degree: "Master's in Computer Science",
       institution: "Birmingham City University - Birmingham, United Kingdom",
       period: "Jan 2024 - Mar 2025",
-      grade: "Currently Enrolled",
-      description: "Advanced studies in computer science with focus on modern software development practices and emerging technologies.",
-      icon: "🎓"
+      grade: "Distinction | 7.6/10",
+      description: "Completed a Master’s in Computer Science from Birmingham City University, focusing on software development, algorithms, and advanced computing technologies.",
+      image: "/assets/bcu.png" // <-- Add your logo path here
     },
     {
       degree: "Bachelor's in Electronics & Communication Engineering",
-      institution: "G. H. Raisoni Technical University - Lucknow, India",
-      period: "Jul 2019 - Oct 2018",
+      institution: "Dr. A.P.J Abdul Kalam Technical University - Lucknow, India",
+      period: "Jul 2014 - Oct 2018",
       grade: "First Class Honours | 7.5/10",
-      description: "Comprehensive study of electronics, communication systems, and engineering principles with practical applications.",
-      icon: "⚡"
+      description: "Comprehensive study of electronics, communication systems, and engineering principles, with a focus on practical applications and integration of basic computer programming.",
+      image: "/assets/aktu.png" // <-- Add your logo path here
     }
   ];
 
@@ -42,8 +41,8 @@ const Education = () => {
       
       <div className="mb-16">
         <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
-          <GraduationCap className="w-8 h-8 text-blue-500" />
-          Education
+          {/* You can keep GraduationCap icon here if you want */}
+          🎓 Education
         </h3>
         
         <div className="space-y-8">
@@ -52,23 +51,29 @@ const Education = () => {
               key={index}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="text-4xl">{edu.icon}</div>
+              <div className="flex items-start gap-4 mb-1">
+                <div className="flex items-center justify-center min-w-[3rem] min-h-[3rem]">
+                  <img
+                    src={edu.image}
+                    alt={`${edu.institution} logo`}
+                    className="w-12 h-12 object-contain rounded bg-white/10"
+                  />
+                </div>
                 <div className="flex-1">
                   <h4 className="text-xl font-bold text-white mb-2">{edu.degree}</h4>
                   <div className="flex flex-col gap-2 text-gray-300 mb-4">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
-                      <span>{edu.institution}</span>
+                      <span className="text-green-400">{edu.institution}</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        <span>{edu.period}</span>
+                        <span className="text-green-400">{edu.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Award className="w-4 h-4" />
-                        <span>{edu.grade}</span>
+                        <span className="text-green-400">{edu.grade}</span>
                       </div>
                     </div>
                   </div>

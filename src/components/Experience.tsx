@@ -80,14 +80,14 @@ const Experience = () => {
               <div className="flex-1 min-w-0">
                 <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 leading-tight">{exp.title}</h3>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-base text-gray-300 mb-4">
-                  <span className="font-semibold text-green-400 truncate">{exp.company}</span>
+                  <span className="font-semibold text-green-500 truncate">{exp.company}</span>
                   <div className="flex items-center gap-1">
                     <MapPin className="w-4 h-4 flex-shrink-0" />
-                    <span className="truncate text-green-400">{exp.location}</span>
+                    <span className="truncate text-green-500">{exp.location}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4 flex-shrink-0" />
-                    <span className="truncate text-green-400">{exp.period}</span>
+                    <span className="truncate text-green-500">{exp.period}</span>
                   </div>
                 </div>
               </div>
