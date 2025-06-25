@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Award, Paintbrush, Code2 } from 'lucide-react';
 
 const Education = () => {
   const education = [
@@ -8,7 +8,7 @@ const Education = () => {
       period: "Jan 2024 - Mar 2025",
       grade: "Distinction | 7.6/10",
       description: "Completed a Master’s in Computer Science from Birmingham City University, focusing on software development, algorithms, and advanced computing technologies.",
-      image: "/assets/bcu.png" // <-- Add your logo path here
+      image: "/assets/bcu.png"
     },
     {
       degree: "Bachelor's in Electronics & Communication Engineering",
@@ -16,19 +16,36 @@ const Education = () => {
       period: "Jul 2014 - Oct 2018",
       grade: "First Class Honours | 7.5/10",
       description: "Comprehensive study of electronics, communication systems, and engineering principles, with a focus on practical applications and integration of basic computer programming.",
-      image: "/assets/aktu.png" // <-- Add your logo path here
+      image: "/assets/aktu.png"
     }
   ];
 
+  // Add an icon or image for each skill category
   const skills = [
     {
-      category: "Front-end development",
-      technologies: ["HTML", "CSS", "React", "Vue", "JavaScript"],
+      category: "UI/UX Design & Markup",
+      icon: <Paintbrush className="w-6 h-6 text-pink-400" />, // Lucide icon
+      technologies: [
+        { name: "HTML", image: "/assets/html-5.png" },
+        { name: "CSS", image: "/assets/css3.jpg" },
+        { name: "Tailwind", image: "/assets/tailwindcss.png" },
+        { name: "Material UI", image: "/assets/materialui.png" },
+        { name: "Bootstrap", image: "/assets/bootstrap.png" },
+        { name: "Framer", image: "/assets/framer.png" },
+        { name: "Figma", image: "/assets/figma.webp" }
+      ],
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
     },
     {
       category: "Front-end development",
-      technologies: ["HTML", "CSS", "React", "Vue", "JavaScript"],
+      icon: <Code2 className="w-6 h-6 text-blue-400" />, // Lucide icon
+      technologies: [
+        { name: "HTML", image: "/assets/html-5.png" },
+        { name: "CSS", image: "/assets/css.png" },
+        { name: "React", image: "/assets/react.png" },
+        { name: "Vue", image: "/assets/vue.png" },
+        { name: "JavaScript", image: "/assets/js.png" }
+      ],
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
     }
   ];
@@ -41,7 +58,6 @@ const Education = () => {
       
       <div className="mb-16">
         <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
-          {/* You can keep GraduationCap icon here if you want */}
           🎓 Education
         </h3>
         
@@ -91,15 +107,25 @@ const Education = () => {
             key={index}
             className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
           >
-            <h4 className="text-xl font-semibold text-white mb-4">{skill.category}</h4>
+            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              {skill.icon}
+              {skill.category}
+            </h4>
             <p className="text-gray-300 mb-6 leading-relaxed">{skill.description}</p>
             <div className="flex flex-wrap gap-2">
               {skill.technologies.map((tech, idx) => (
                 <span 
                   key={idx}
-                  className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm border border-blue-600/30"
+                  className="flex items-center gap-2 px-3 py-1 bg-emerald-600/10 text-green-400/40 rounded-full text-sm border border-blue-600/30"
                 >
-                  {tech}
+                  {tech.image && (
+                    <img
+                      src={tech.image}
+                      alt={tech.name}
+                      className="w-5 h-5 object-contain"
+                    />
+                  )}
+                  {tech.name}
                 </span>
               ))}
             </div>
