@@ -57,7 +57,7 @@ const Hero = () => {
         <div className="mb-2">
           <div className="relative mx-auto mb-3 w-44 h-44">
             <img 
-              src="../../assets/20240315_124547-c.jpg"
+              src="../../assets/kamran_mustafa.jpg"
               alt="Profile"
               className="w-44 h-44 rounded-full object-cover border-4 border-green-500/30 shadow-xl animate-pulse transition-transform transform hover:scale-105 hover:shadow-2xl"
             />
