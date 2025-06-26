@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Serif Thai
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/notoserifthai/v27/k3kyo80MPvpLmixYH7euCxWpSMu3-gcWGj0hHAKGvUQlUv_bCKDUSzB5L0oiF-RRCmsdu0Qx.ttf
+- Font License: undefined)
