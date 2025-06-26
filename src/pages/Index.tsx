@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
@@ -8,7 +7,11 @@ import Contact from '../components/Contact';
 import Navigation from '../components/Navigation';
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('experience'); // Set initial section
+
+  useEffect(() => {
+    setActiveSection('experience');
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -29,7 +32,7 @@ const Index = () => {
               </div>
             </section>
             
-            <section id="education" className="min-h-screen p-6 lg:p-10 xl:p-12 bg-gray-800/30 flex items-center">
+            <section id="mybackground" className="min-h-screen p-6 lg:p-10 xl:p-12 bg-gray-800/30 flex items-center">
               <div className="w-full">
                 <Education />
               </div>

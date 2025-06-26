@@ -1,5 +1,5 @@
-
 import { Home, Briefcase, GraduationCap, Code, Contact } from 'lucide-react';
+import { useEffect } from 'react';
 
 interface NavigationProps {
   activeSection: string;
@@ -10,7 +10,7 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
   const navItems = [
     // { id: 'home', icon: Home, label: 'Home' },
     { id: 'experience', icon: Briefcase, label: 'Experience' },
-    { id: 'education', icon: GraduationCap, label: 'Education' },
+    { id: 'mybackground', icon: GraduationCap, label: 'My Background' },
     { id: 'projects', icon: Code, label: 'Projects' },
     { id: 'contact', icon: Contact, label: 'Contact' }
   ];
@@ -25,6 +25,12 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
     }
   };
 
+  useEffect(() => {
+    setActiveSection('experience');
+    const element = document.getElementById('experience');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  }, []); // Empty dependency array to run once on mount
+
   return (
     <nav className="fixed top-8 right-8 z-50 lg:flex hidden">
       <div className="flex flex-col gap-2 bg-gray-800/80 backdrop-blur-sm p-2 rounded-2xl border border-gray-700">
@@ -34,8 +40,8 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
             onClick={() => handleNavClick(item.id)}
             className={`p-3 rounded-xl transition-all duration-200 group relative ${
               activeSection === item.id
-                ? 'bg-blue-600 text-white'
-                : 'text-gray-400 hover:text-white hover:bg-gray-700'
+                ? 'bg-emerald-600/70 text-white'
+                : 'text-gray-400 hover:text-white hover:bg-gray-500/40 hover:shadow-lg'
             }`}
             title={item.label}
           >

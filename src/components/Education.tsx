@@ -34,7 +34,7 @@ const Education = () => {
         { name: "Framer", image: "/assets/framer.png" },
         { name: "Figma", image: "/assets/figma.webp" }
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Designing clean, responsive, and user-friendly interfaces that enhance overall digital experiences."
     },
     {
       category: "Frontend",
@@ -46,7 +46,7 @@ const Education = () => {
         { name: "Vue.js", image: "/assets/vuejs.svg" },
         { name: "Next.Js", image: "/assets/nextjs.jpeg" },
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Building dynamic, modular, and high-performance web interfaces with a focus on seamless user interactions and maintainable architecture."
     },
     {
       category: "Backend | Database",
@@ -58,7 +58,7 @@ const Education = () => {
         { name: "MySQL", image: "/assets/ms.png" },
         { name: "PostgreSQL", image: "/assets/ps.png" },
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Developing robust server-side applications and managing databases to ensure efficient data processing, scalability, and seamless backend operations."
     },
     {
       category: "AI & Data Science",
@@ -74,7 +74,7 @@ const Education = () => {
         { name: "Matplotlib", image: "/assets/mt.png" },
         { name: "Seaborn", image: "/assets/sb.png" },
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Using data and machine learning to analyze information, build models, and develop practical AI solutions."
     },
     {
       category: "Testing & Methodologies",
@@ -83,9 +83,9 @@ const Education = () => {
         { name: "React Testing Library", image: "/assets/rtl.png" },
         { name: "Jest", image: "/assets/jt.png" },
         { name: "Jira", image: "/assets/jr.jpeg" },
-        { name: "Agile & Scrum Workflows", image: "/assets/asw.png" }
+        { name: "Agile & Scrum Workflows", image: "/assets/asw.jpg" }
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Conducting testing and following workflows to ensure quality and effective project delivery."
     },
     {
       category: "Cloud & DevOps (Familiar)",
@@ -100,22 +100,22 @@ const Education = () => {
         { name: "CI/CD", image: "/assets/cid.webp" },
         { name: "Jenkins", image: "/assets/jk.png" },
       ],
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites."
+      description: "Working with cloud platforms and DevOps tools to support deployment, automation, and continuous integration processes."
     },
   ];
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         My Background
       </h2>
       
-      <div className="mb-16">
-        <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
+      <div className="mb-7">
+        <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
           🎓 Education
         </h3>
         
-        <div className="space-y-8">
+        <div className="space-y-4">
           {education.map((edu, index) => (
             <div 
               key={index}
@@ -155,36 +155,42 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {skills.map((skill, index) => (
-          <div 
-            key={index}
-            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
-          >
-            <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-              {skill.icon}
-              {skill.category}
-            </h4>
-            <p className="text-gray-300 mb-2 leading-relaxed">{skill.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {skill.technologies.map((tech, idx) => (
-                <span 
-                  key={idx}
-                  className="flex items-center gap-2 px-3 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-sm border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-900 hover:text-green-300 hover:shadow-lg"
-                >
-                  {tech.image && (
-                    <img
-                      src={tech.image}
-                      alt={tech.name}
-                      className="w-5 h-5 object-contain"
-                    />
-                  )}
-                  {tech.name}
-                </span>
-              ))}
+      <div className="mb-0">
+        <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
+          ⚙️ Technical Skills
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {skills.map((skill, index) => (
+            <div 
+              key={index}
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+            >
+              <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                {skill.icon}
+                {skill.category}
+              </h4>
+              <p className="text-gray-300 mb-2 leading-relaxed">{skill.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {skill.technologies.map((tech, idx) => (
+                  <span 
+                    key={idx}
+                    className="flex items-center gap-2 px-3 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-sm border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-900 hover:text-green-300 hover:shadow-lg"
+                  >
+                    {tech.image && (
+                      <img
+                        src={tech.image}
+                        alt={tech.name}
+                        className="w-5 h-5 object-contain"
+                      />
+                    )}
+                    {tech.name}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

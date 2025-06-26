@@ -44,7 +44,7 @@ const Projects = () => {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         Projects
       </h2>
       

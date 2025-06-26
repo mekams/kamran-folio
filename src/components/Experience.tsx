@@ -5,7 +5,7 @@ const Experience = () => {
     {
       title: "Technical Customer Support Advisor",
       company: "Boots UK Ltd.",
-      location: "Onsite | Part-Time | United Kingdom",
+      location: "Onsite | Part-Time | Unied Kingdom",
       period: "Sep 2024 - Present",
       description: " I proactively managed inquiries and collaborated with internal teams to deliver timely solutions, ensuring high customer satisfaction.",
       responsibilities: [
@@ -57,11 +57,11 @@ const Experience = () => {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl lg:text-5xl font-bold mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+      <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
         Experience
       </h2>
       
-      <div className="space-y-8">
+      <div className="space-y-4">
         {experiences.map((exp, index) => (
           <div 
             key={index}
@@ -100,7 +100,7 @@ const Experience = () => {
               <ul className="space-y-3">
                 {exp.responsibilities.map((resp, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-base text-gray-300">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-slate-500 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="leading-relaxed">{resp}</span>
                   </li>
                 ))}
