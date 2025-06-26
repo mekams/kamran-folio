@@ -16,12 +16,12 @@ const Index = () => {
     // Hide scrollbar with advanced webkit styles
     document.body.style.overflowY = 'scroll';
     document.body.style.scrollbarWidth = 'none'; // Firefox
-    document.body.style.msOverflowStyle = 'none'; // IE/Edge
+    // document.body.style.msOverflowStyle = 'none'; // IE/Edge
     return () => {
       document.documentElement.style.scrollBehavior = '';
       document.body.style.overflowY = '';
       document.body.style.scrollbarWidth = '';
-      document.body.style.msOverflowStyle = '';
+      // document.body.style.msOverflowStyle = '';
     };
   }, []);
 

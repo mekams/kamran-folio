@@ -25,12 +25,6 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
     }
   };
 
-  useEffect(() => {
-    setActiveSection('experience');
-    const element = document.getElementById('experience');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  }, []); // Empty dependency array to run once on mount
-
   return (
     <nav className="fixed top-8 right-8 z-50 lg:flex hidden">
       <div className="flex flex-col gap-2 bg-gray-800/80 backdrop-blur-sm p-2 rounded-2xl border border-gray-700">
@@ -44,6 +38,7 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
                 : 'text-gray-400 hover:text-white hover:bg-gray-500/40 hover:shadow-lg'
             }`}
             title={item.label}
+            aria-label={item.label}
           >
             <item.icon className="w-5 h-5" />
             <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
