@@ -123,11 +123,11 @@ const Education = () => {
               style={{ willChange: 'transform, box-shadow, border-color, background' }}
             >
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-1">
-                <div className="flex items-center justify-center min-w-[3rem] min-h-[3rem]">
+                <div className="flex items-center justify-center min-w-[3rem] min-h-[3rem] w-full sm:w-auto mb-3 sm:mb-0">
                   <img
                     src={edu.image}
                     alt={`${edu.institution} logo`}
-                    className="w-12 h-12 object-contain rounded bg-white/10 transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95"
+                    className="w-12 h-12 object-contain rounded bg-white/10 transition-transform duration-300 group-hover:scale-105 group-hover:brightness-95 mx-auto sm:mx-0"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
