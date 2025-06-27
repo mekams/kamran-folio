@@ -160,22 +160,22 @@ const Education = () => {
           ⚙️ Technical Skills
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-5 border border-gray-700/50"
             >
-              <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                 {skill.icon}
                 {skill.category}
               </h4>
-              <p className="text-gray-300 mb-2 leading-relaxed">{skill.description}</p>
+              <p className="text-gray-400 mb-2 text-sm line-clamp-2">{skill.description}</p>
               <div className="flex flex-wrap gap-2">
                 {skill.technologies.map((tech, idx) => (
                   <span 
                     key={idx}
-                    className="flex items-center gap-2 px-3 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-sm border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-900 hover:text-green-300 hover:shadow-lg"
+                    className="flex items-center gap-2 px-2 py-0.5 bg-emerald-900/20 text-green-300/60 rounded-full text-xs border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-300 hover:text-green-300 hover:shadow-lg"
                   >
                     {tech.image && (
                       <img
