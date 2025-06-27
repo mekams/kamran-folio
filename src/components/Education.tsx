@@ -119,9 +119,9 @@ const Education = () => {
           {education.map((edu, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300"
             >
-              <div className="flex items-start gap-4 mb-1">
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-1">
                 <div className="flex items-center justify-center min-w-[3rem] min-h-[3rem]">
                   <img
                     src={edu.image}
@@ -129,25 +129,25 @@ const Education = () => {
                     className="w-12 h-12 object-contain rounded bg-white/10"
                   />
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-bold text-white mb-2">{edu.degree}</h4>
-                  <div className="flex flex-col gap-2 text-gray-300 mb-4">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-2">{edu.degree}</h4>
+                  <div className="flex flex-col gap-2 text-gray-300 mb-2">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
-                      <span className="text-green-400">{edu.institution}</span>
+                      <span className="text-green-400 text-xs md:text-sm">{edu.institution}</span>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-wrap gap-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        <span className="text-green-400">{edu.period}</span>
+                        <span className="text-green-400 text-xs md:text-sm">{edu.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Award className="w-4 h-4" />
-                        <span className="text-green-400">{edu.grade}</span>
+                        <span className="text-green-400 text-xs md:text-sm">{edu.grade}</span>
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                  <p className="text-gray-300 leading-relaxed text-xs md:text-sm">{edu.description}</p>
                 </div>
               </div>
             </div>
@@ -160,22 +160,22 @@ const Education = () => {
           ⚙️ Technical Skills
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50"
             >
-              <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                 {skill.icon}
                 {skill.category}
               </h4>
-              <p className="text-gray-300 mb-2 leading-relaxed">{skill.description}</p>
+              <p className="text-gray-300 mb-2 leading-relaxed text-xs md:text-sm">{skill.description}</p>
               <div className="flex flex-wrap gap-2">
                 {skill.technologies.map((tech, idx) => (
                   <span 
                     key={idx}
-                    className="flex items-center gap-2 px-3 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-sm border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-900 hover:text-green-300 hover:shadow-lg"
+                    className="flex items-center gap-2 px-2 py-1 bg-emerald-900/20 text-green-300/60 rounded-full text-xs border border-stone-900/60 hover:bg-emerald-900/30 transition-colors duration-300 hover:text-green-300 hover:shadow-lg"
                   >
                     {tech.image && (
                       <img
