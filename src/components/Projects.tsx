@@ -8,7 +8,7 @@ const Projects = () => {
       title: "Resume Builder",
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites.",
       image: "../assets/pmocks/rbuild.png",
-      technologies: ["HTML", "CSS", "React", "Vue", "JS"],
+      technologies: ["React.js", "Redux", "jspdf", "Material UI", "React-Router", "React Hook Form", "JavaScript", "Vercel"],
       demoUrl: "https://resume-builder-mekams.vercel.app/",
       githubUrl: "https://github.com/mekams/resume_builder",
       featured: true
@@ -17,7 +17,7 @@ const Projects = () => {
       title: "Youtube Clone",
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites.",
       image: "../assets/pmocks/yc.png",
-      technologies: ["HTML", "CSS", "React", "Vue", "JS"],
+      technologies: ["React.js", "JavaScript"," Tailwind CSS", "React-Router", "Netlify", "Axios", "RapidAPI", "CI/CD"],
       demoUrl: "https://k-tube.netlify.app/",
       githubUrl: "#",
       featured: true
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Food Delivery",
       description: "Full-stack e-commerce solution with modern design and secure payment integration.",
       image: "../assets/pmocks/fd.png",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["React.js", "Bootstrap", "Redux", "React-Router", "JavaScript", "Vercel"],
       demoUrl: "https://pizza-pulse-delivery.vercel.app/",
       githubUrl: "https://github.com/mekams/pizza-pulse-delivery",
       featured: false
@@ -35,9 +35,9 @@ const Projects = () => {
       title: "LangChain Text Summarization",
       description: "Collaborative task management application with real-time updates and team features.",
       image: "../assets/pmocks/langc.png",
-      technologies: ["Vue.js", "Firebase", "Tailwind"],
+      technologies: ["Python", "Hugging Face Transformers", "LangChain", "Dataset", "ROUGE", "Streamlit", "Word Cloud", "NLTK", "Pandas", "Matplotlib"],
       demoUrl: "https://langtextsum.streamlit.app/",
-      githubUrl: "#",
+      githubUrl: "https://github.com/mekams/langTextSum",
       featured: false
     },
     {
@@ -62,7 +62,7 @@ const Projects = () => {
       title: "Integrated Project Management System",
       description: "Collaborative task management application with real-time updates and team features.",
       image: "../assets/pmocks/mysql.png",
-      technologies: ["Vue.js", "Firebase", "Tailwind"],
+      technologies: ["MySQL", "XAMPP", "phpMyAdmin", "SQL"],
       demoUrl: "#",
       githubUrl: "https://github.com/mekams/MySql-databse-Project",
       featured: false
@@ -81,26 +81,30 @@ const Projects = () => {
         Projects
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {projects.slice(0, visibleCount).map((project, index) => {
           const hasDemo = project.demoUrl && project.demoUrl !== "#";
           const CardContent = (
             <div
               className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full
                 ${hasDemo ? 'cursor-pointer hover:-translate-y-2 hover:scale-[1.025] hover:bg-gray-800/80' : 'opacity-70 cursor-not-allowed'}`}
+              style={{ maxWidth: 420, margin: "0 auto" }}
             >
-              <div className="relative w-full h-48 flex items-center justify-center overflow-hidden bg-gray-900">
+              {/* Larger image area */}
+              <div className="relative w-full h-56 flex items-center justify-center overflow-hidden bg-gray-900">
                 <img 
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 group-hover:brightness-95"
+                  style={{ aspectRatio: "16/9", background: "#222" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
               </div>
               
-              <div className="p-6 flex flex-col justify-center flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
+              {/* More compact text area */}
+              <div className="p-4 flex flex-col justify-center flex-1">
+                <div className="flex items-center justify-between mb-1">
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300 truncate">{project.title}</h3>
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -110,17 +114,17 @@ const Projects = () => {
                     tabIndex={-1}
                     aria-label="View on GitHub"
                   >
-                    <Github className="w-6 h-6" />
+                    <Github className="w-5 h-5" />
                     <span className="text-xs font-medium">Source Code</span>
                   </a>
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-300 mb-2 leading-snug text-sm line-clamp-2">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-2">
                   {project.technologies.map((tech, idx) => (
                     <span 
                       key={idx}
-                      className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm border border-blue-600/30"
+                      className="px-2 py-0.5 bg-emerald-900/20 text-green-300/60 rounded-full text-xs border border-blue-600/30"
                     >
                       {tech}
                     </span>
@@ -128,7 +132,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 mt-auto">
-                  <span className="inline-flex items-center text-blue-400 text-sm font-semibold">
+                  <span className="inline-flex items-center text-blue-400 text-xs font-semibold">
                     <ExternalLink className="w-4 h-4 mr-1" />
                     {hasDemo ? "Live Demo" : "No Live Demo"}
                   </span>
@@ -157,7 +161,7 @@ const Projects = () => {
         <div className="text-center mt-12">
           <Button 
             variant="outline" 
-            className="border-gray-600 text-gray-300 hover:bg-gray-700 px-8 py-3"
+            className="bg-gray-500/25 border-slate-700 text-white-300 hover:bg-green-600 px-4 py-2 text-sm w-auto"
             onClick={handleLoadMore}
           >
             Load more projects
