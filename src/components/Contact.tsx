@@ -49,8 +49,8 @@ const Contact = () => {
   };
 
   const handleScheduleMeeting = () => {
-    console.log('Schedule meeting clicked');
-    toast.info('Redirecting to calendar booking...');
+    window.open('https://cal.com/kamraneg', '_blank'); // Replace with your Cal.com link
+    toast.info('Redirecting to Cal.com meeting booking...');
   };
 
   return (
@@ -72,18 +72,18 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-600/20 rounded-full">
-                  <Mail className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-gray-600/20 rounded-full">
+                  <Mail className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white">kamran@example.com</p>
+                  <p className="text-white">kamraneg@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-600/20 rounded-full">
-                  <Phone className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-gray-600/20 rounded-full">
+                  <Phone className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
@@ -92,8 +92,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-600/20 rounded-full">
-                  <MapPin className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-gray-600/20 rounded-full">
+                  <MapPin className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
@@ -105,7 +105,7 @@ const Contact = () => {
 
           <Button 
             onClick={handleScheduleMeeting}
-            className="w-full bg-green-600 hover:bg-green-700 text-white py-4 text-lg font-semibold"
+            className="w-full bg-red-500/40 hover:bg-emerald-600/50 text-white py-4 text-lg font-semibold animate-pulse flex items-center justify-center transition-colors duration-5000 ease-in-out"
           >
             <Calendar className="w-5 h-5 mr-2" />
             Schedule a Meeting
