@@ -52,7 +52,7 @@ const Projects = () => {
     {
       title: "Lung Cancer Prediction",
       description: "Collaborative task management application with real-time updates and team features.",
-      image: "../assets/pmocks/tutils.png",
+      image: "../assets/pmocks/lc.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
       demoUrl: "#",
       githubUrl: "#",
@@ -61,7 +61,7 @@ const Projects = () => {
     {
       title: "Integrated Project Management System",
       description: "Collaborative task management application with real-time updates and team features.",
-      image: "../assets/pmocks/tutils.png",
+      image: "../assets/pmocks/mysql.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
       demoUrl: "#",
       githubUrl: "#",
@@ -82,63 +82,75 @@ const Projects = () => {
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.slice(0, visibleCount).map((project, index) => (
-          <a
-            key={index}
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer flex flex-col h-full
-              hover:-translate-y-2 hover:scale-[1.025] hover:bg-gray-800/80 no-underline"
-            style={{ textDecoration: 'none' }}
-          >
-            <div className="relative w-full h-48 flex items-center justify-center overflow-hidden bg-gray-900">
-              <img 
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-            </div>
-            
-            <div className="p-6 flex flex-col justify-center flex-1">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 flex items-center gap-1 text-gray-400 hover:text-blue-400 transition-colors"
-                  onClick={e => e.stopPropagation()}
-                  tabIndex={-1}
-                  aria-label="View on GitHub"
-                >
-                  <Github className="w-6 h-6" />
-                  <span className="text-xs font-medium">Source Code</span>
-                </a>
+        {projects.slice(0, visibleCount).map((project, index) => {
+          const hasDemo = project.demoUrl && project.demoUrl !== "#";
+          const CardContent = (
+            <div
+              className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full
+                ${hasDemo ? 'cursor-pointer hover:-translate-y-2 hover:scale-[1.025] hover:bg-gray-800/80' : 'opacity-70 cursor-not-allowed'}`}
+            >
+              <div className="relative w-full h-48 flex items-center justify-center overflow-hidden bg-gray-900">
+                <img 
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
               
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, idx) => (
-                  <span 
-                    key={idx}
-                    className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm border border-blue-600/30"
+              <div className="p-6 flex flex-col justify-center flex-1">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 flex items-center gap-1 text-gray-400 hover:text-blue-400 transition-colors"
+                    onClick={e => e.stopPropagation()}
+                    tabIndex={-1}
+                    aria-label="View on GitHub"
                   >
-                    {tech}
+                    <Github className="w-6 h-6" />
+                    <span className="text-xs font-medium">Source Code</span>
+                  </a>
+                </div>
+                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, idx) => (
+                    <span 
+                      key={idx}
+                      className="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm border border-blue-600/30"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex gap-2 mt-auto">
+                  <span className="inline-flex items-center text-blue-400 text-sm font-semibold">
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    {hasDemo ? "Live Demo" : "No Live Demo"}
                   </span>
-                ))}
-              </div>
-              
-              <div className="flex gap-2 mt-auto">
-                <span className="inline-flex items-center text-blue-400 text-sm font-semibold">
-                  <ExternalLink className="w-4 h-4 mr-1" />
-                  Live Demo
-                </span>
+                </div>
               </div>
             </div>
-          </a>
-        ))}
+          );
+
+          return hasDemo ? (
+            <a
+              key={index}
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none' }}
+            >
+              {CardContent}
+            </a>
+          ) : (
+            <div key={index}>{CardContent}</div>
+          );
+        })}
       </div>
       
       {visibleCount < projects.length && (
