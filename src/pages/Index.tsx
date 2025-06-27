@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
@@ -8,6 +8,28 @@ import Navigation from '../components/Navigation';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('experience'); // Set initial section
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionIds = ['experience', 'mybackground', 'projects', 'contact'];
+      let current = 'experience';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom > 120) {
+            current = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // set initial
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     setActiveSection('experience');
@@ -23,6 +45,16 @@ const Index = () => {
       document.body.style.scrollbarWidth = '';
       // document.body.style.msOverflowStyle = '';
     };
+  }, []);
+
+  useEffect(() => {
+    // On refresh, scroll to the "experience" section smoothly
+    const el = document.getElementById('experience');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }, []);
 
   return (

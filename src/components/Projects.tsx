@@ -18,7 +18,7 @@ const Projects = () => {
       description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites.",
       image: "../assets/pmocks/yc.png",
       technologies: ["HTML", "CSS", "React", "Vue", "JS"],
-      demoUrl: "#",
+      demoUrl: "https://k-tube.netlify.app/",
       githubUrl: "#",
       featured: true
     },
@@ -27,8 +27,8 @@ const Projects = () => {
       description: "Full-stack e-commerce solution with modern design and secure payment integration.",
       image: "../assets/pmocks/fd.png",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://pizza-pulse-delivery.vercel.app/",
+      githubUrl: "https://github.com/mekams/pizza-pulse-delivery",
       featured: false
     },
     {
@@ -36,7 +36,7 @@ const Projects = () => {
       description: "Collaborative task management application with real-time updates and team features.",
       image: "../assets/pmocks/langc.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
-      demoUrl: "#",
+      demoUrl: "https://langtextsum.streamlit.app/",
       githubUrl: "#",
       featured: false
     },
@@ -45,8 +45,8 @@ const Projects = () => {
       description: "Collaborative task management application with real-time updates and team features.",
       image: "../assets/pmocks/tutils.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
-      demoUrl: "#",
-      githubUrl: "#",
+      demoUrl: "https://textu.netlify.app/",
+      githubUrl: "https://github.com/mekams/Text-Utils-1",
       featured: false
     },
     {
@@ -55,7 +55,7 @@ const Projects = () => {
       image: "../assets/pmocks/lc.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/mekams/Lung-Cancer-Prediction",
       featured: false
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
       image: "../assets/pmocks/mysql.png",
       technologies: ["Vue.js", "Firebase", "Tailwind"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/mekams/MySql-databse-Project",
       featured: false
     }
   ];
