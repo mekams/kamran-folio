@@ -86,8 +86,8 @@ const Projects = () => {
           const hasDemo = project.demoUrl && project.demoUrl !== "#";
           const CardContent = (
             <div
-              className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full
-                ${hasDemo ? 'cursor-pointer hover:-translate-y-2 hover:scale-[1.025] hover:bg-gray-800/80' : 'opacity-70 cursor-not-allowed'}`}
+              className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-emerald-500/70 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full
+                ${hasDemo ? 'cursor-pointer hover:-translate-y-2 hover:scale-[1.025] hover:bg-emerald-900/30' : 'opacity-70 cursor-not-allowed'}`}
               style={{ maxWidth: 420, margin: "0 auto" }}
             >
               {/* Larger image area */}
@@ -104,12 +104,12 @@ const Projects = () => {
               {/* More compact text area */}
               <div className="p-4 flex flex-col justify-center flex-1">
                 <div className="flex items-center justify-between mb-1">
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300 truncate">{project.title}</h3>
+                  <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors duration-300 truncate">{project.title}</h3>
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 flex items-center gap-1 text-gray-400 hover:text-blue-400 transition-colors"
+                    className="ml-2 flex items-center gap-1 text-gray-400 hover:text-red-400/70 transition-colors"
                     onClick={e => e.stopPropagation()}
                     tabIndex={-1}
                     aria-label="View on GitHub"
@@ -124,7 +124,7 @@ const Projects = () => {
                   {project.technologies.map((tech, idx) => (
                     <span 
                       key={idx}
-                      className="px-2 py-0.5 bg-emerald-900/20 text-green-300/60 rounded-full text-xs border border-blue-600/30"
+                      className="px-2 py-0.5 bg-emerald-900/20 text-green-300/60 rounded-full text-xs border border-stone-900/60"
                     >
                       {tech}
                     </span>
@@ -132,7 +132,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 mt-auto">
-                  <span className="inline-flex items-center text-blue-400 text-xs font-semibold">
+                  <span className="inline-flex items-center text-red-400/70 text-xs font-semibold">
                     <ExternalLink className="w-4 h-4 mr-1" />
                     {hasDemo ? "Live Demo" : "No Live Demo"}
                   </span>

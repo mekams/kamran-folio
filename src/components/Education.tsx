@@ -119,7 +119,7 @@ const Education = () => {
           {education.map((edu, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/50 transition-all duration-300 hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-gray-800/80"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700/50 transition-all duration-300 hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-emerald-900/30"
               style={{ willChange: 'transform, box-shadow, border-color, background' }}
             >
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-1">
@@ -165,7 +165,7 @@ const Education = () => {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 transition-all duration-300 hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-gray-800/80"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 transition-all duration-300 hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-emerald-900/30"
               style={{ willChange: 'transform, box-shadow, border-color, background' }}
             >
               <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">

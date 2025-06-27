@@ -66,7 +66,7 @@ const Experience = () => {
           <div 
             key={index}
             className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-700/50 transition-all duration-300 flex flex-col sm:flex-row gap-6
-              hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-gray-800/80"
+              hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-emerald-900/30"
             style={{ willChange: 'transform, box-shadow, border-color, background' }}
           >
             <div className="flex items-center justify-center min-w-[4.5rem] min-h-[4.5rem] mb-4 sm:mb-0">
