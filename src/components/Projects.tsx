@@ -6,7 +6,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Resume Builder",
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites.",
+      description: "Resume Builder web application allows users to enter personal and professional details via structured forms and choose from multiple modern templates. It leverages the tech stack below to generate and download resumes in PDF format.",
       image: "../assets/pmocks/rbuild.png",
       technologies: ["React.js", "Redux", "jspdf", "Material UI", "React-Router", "React Hook Form", "JavaScript", "Vercel"],
       demoUrl: "https://resume-builder-mekams.vercel.app/",
@@ -15,16 +15,16 @@ const Projects = () => {
     },
     {
       title: "Youtube Clone",
-      description: "Expert in HTML, CSS, React, and Vue. JavaScript, crafting responsive, high-performance websites.",
+      description: "YouTube Clone delivers a smooth user experience with interactive video search, browsing, and playback, achieving fast load times and high responsiveness. It supports real-time data fetching and responsive design, resulting in increased user engagement and smooth interaction across devices.",
       image: "../assets/pmocks/yc.png",
       technologies: ["React.js", "JavaScript"," Tailwind CSS", "React-Router", "Netlify", "Axios", "RapidAPI", "CI/CD"],
       demoUrl: "https://k-tube.netlify.app/",
-      githubUrl: "#",
+      githubUrl: "https://github.com/mekams/youtube-clone",
       featured: true
     },
     {
       title: "Food Delivery",
-      description: "Full-stack e-commerce solution with modern design and secure payment integration.",
+      description: "Food Delivery web app offers an intuitive interface for browsing, customizing, and ordering pizzas with real-time cart updates and order tracking. Efficient state management and routing enable fast, responsive performance across all devices.",
       image: "../assets/pmocks/fd.png",
       technologies: ["React.js", "Bootstrap", "Redux", "React-Router", "JavaScript", "Vercel"],
       demoUrl: "https://pizza-pulse-delivery.vercel.app/",
@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       title: "LangChain Text Summarization",
-      description: "Collaborative task management application with real-time updates and team features.",
+      description: "LangChain Text Summarization is a hybrid text summarization tool using Hugging Face models and LangChain, improving ROUGE-1 F1 scores by 28% (68.66% vs. 53.52%). Deployed a real-time Streamlit app for document upload, summary generation, and model evaluation using CNN/DailyMail and ROUGE metrics.",
       image: "../assets/pmocks/langc.png",
       technologies: ["Python", "Hugging Face Transformers", "LangChain", "Dataset", "ROUGE", "Streamlit", "Word Cloud", "NLTK", "Pandas", "Matplotlib"],
       demoUrl: "https://langtextsum.streamlit.app/",
@@ -118,7 +118,9 @@ const Projects = () => {
                     <span className="text-xs font-medium">Source Code</span>
                   </a>
                 </div>
-                <p className="text-gray-300 mb-2 leading-snug text-sm line-clamp-2">{project.description}</p>
+                <p className="text-gray-300 mb-2 leading-snug text-sm">
+                  {project.description}
+                </p>
                 
                 <div className="flex flex-wrap gap-2 mb-2">
                   {project.technologies.map((tech, idx) => (
