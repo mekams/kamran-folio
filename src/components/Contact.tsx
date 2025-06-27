@@ -1,10 +1,14 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
+
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,9 +27,25 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast.success('Message sent successfully! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      USER_ID
+    )
+    .then(() => {
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    })
+    .catch(() => {
+      toast.error("Failed to send message. Please try again later.");
+    });
   };
 
   const handleScheduleMeeting = () => {
