@@ -86,7 +86,7 @@ const Projects = () => {
           const hasDemo = project.demoUrl && project.demoUrl !== "#";
           const CardContent = (
             <div
-              className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-emerald-500/70 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full
+              className={`group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-emerald-500/70 transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col h-full hover:bg-emerald-900/30
                 ${hasDemo ? 'cursor-pointer hover:-translate-y-2 hover:scale-[1.025] hover:bg-emerald-900/30' : 'opacity-70 cursor-not-allowed'}`}
               style={{ maxWidth: 420, margin: "0 auto" }}
             >

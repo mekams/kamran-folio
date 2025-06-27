@@ -49,12 +49,7 @@ const Index = () => {
 
   useEffect(() => {
     // On refresh, scroll to the "experience" section smoothly
-    const el = document.getElementById('experience');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
