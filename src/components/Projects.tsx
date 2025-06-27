@@ -109,7 +109,7 @@ const Projects = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 flex items-center gap-1 text-gray-400 hover:text-red-400/70 transition-colors"
+                    className="ml-2 flex items-center gap-1 text-slate-500/80 hover:text-red-400/70 transition-colors"
                     onClick={e => e.stopPropagation()}
                     tabIndex={-1}
                     aria-label="View on GitHub"
@@ -132,7 +132,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 mt-auto">
-                  <span className="inline-flex items-center text-red-400/70 text-xs font-semibold">
+                  <span className="inline-flex items-center text-red-400/70 hover:text-black text-xs font-semibold">
                     <ExternalLink className="w-4 h-4 mr-1" />
                     {hasDemo ? "Live Demo" : "No Live Demo"}
                   </span>
