@@ -103,7 +103,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="relative group p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
           >
-            <Github className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
+            <Github className="w-5 h-5 text-slate-400 group-hover:text-green-400 transition-colors" />
             <span className="absolute left-1/2 -translate-x-1/2 top-10 opacity-0 group-hover:opacity-100 bg-gray-900 text-xs text-white px-2 py-1 rounded shadow transition-opacity pointer-events-none z-10">
               GitHub
             </span>
@@ -114,7 +114,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="relative group p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
           >
-            <Linkedin className="w-5 h-5 group-hover:text-blue-400 transition-colors" />
+            <Linkedin className="w-5 h-5 text-slate-400 group-hover:text-green-400 transition-colors" />
             <span className="absolute left-1/2 -translate-x-1/2 top-10 opacity-0 group-hover:opacity-100 bg-gray-900 text-xs text-white px-2 py-1 rounded shadow transition-opacity pointer-events-none z-10">
               LinkedIn
             </span>
@@ -124,19 +124,19 @@ const Hero = () => {
         {/* Contact Information */}
         <div className="mb-2 space-y-1 font-semibold">
           <div className="flex items-center justify-center gap-2 text-gray-300">
-            <Mail className="w-3 h-3 text-blue-400" />
+            <Mail className="w-3 h-3 text-slate-400" />
             <button 
               onClick={handleEmail}
-              className="hover:text-blue-400 transition-colors text-xs"
+              className="hover:text-green-400 transition-colors text-xs"
             >
               kamraneg@gmail.com
             </button>
           </div>
           <div className="flex items-center justify-center gap-2 text-gray-300">
-            <Phone className="w-3 h-3 text-blue-400" />
+            <Phone className="w-3 h-3 text-slate-400" />
             <button 
               onClick={handleCall}
-              className="hover:text-blue-400 transition-colors text-xs"
+              className="hover:text-green-400 transition-colors text-xs"
             >
               +44 (786) 912 8971
             </button>
