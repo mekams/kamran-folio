@@ -42,16 +42,16 @@ const Projects = () => {
     },
     {
       title: "Text Utility App",
-      description: "Textu is a sleek and simple text utility app designed to quickly analyze, format, and transform your text with ease.",
+      description: "Textu is a sleek and simple text utility app designed for fast and effortless text manipulation.It offers features like uppercase, lowercase, capitalise, text-to-speech, copy to clipboard, and delete/clear text.Perfect for quick formatting, editing, or converting text on the go.",
       image: "../assets/pmocks/tutils.png",
-      technologies: ["React.js", "JavaScript", "React-Router"],
+      technologies: ["React.js", "JavaScript", "React-Router", "CSS", "HTML", "Netlify"],
       demoUrl: "https://textu.netlify.app/",
       githubUrl: "https://github.com/mekams/Text-Utils-1",
       featured: false
     },
     {
       title: "Lung Cancer Prediction",
-      description: "Collaborative task management application with real-time updates and team features.",
+      description: "The Random Forest model achieved the highest accuracy (96%) and F1-score, making it the most reliable and robust for predicting lung cancer mortality, while ANN showed improvement but remained less accurate, and future work should enhance model interpretability and incorporate more diverse data.x",
       image: "../assets/pmocks/lc.png",
       technologies: ["Jupyter Notebook", "Pandas", "Data Cleaning", "Kaggle", "Decision Tree", "Random Forest", "ANN", "Data Visualization", "Model Train -Scikit-learn"],
       demoUrl: "#",
