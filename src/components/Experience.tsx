@@ -61,42 +61,37 @@ const Experience = () => {
         Experience
       </h2>
       
-      <div className="space-y-4">
+      <div className="flex flex-col gap-5">
         {experiences.map((exp, index) => (
           <div 
             key={index}
-            className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-[1.01]"
+            className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-700/50 transition-all duration-300 flex flex-col sm:flex-row gap-6
+              hover:scale-[1.015] hover:shadow-2xl hover:border-emerald-500/70 hover:bg-gray-800/80"
+            style={{ willChange: 'transform, box-shadow, border-color, background' }}
           >
-            <div className="flex items-start gap-4 mb-2">
-              <div className="flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem]">
-                {exp.image && (
-                  <img
-                    src={exp.image}
-                    alt={`${exp.company} logo`}
-                    className="w-10 h-10 lg:w-12 lg:h-12 object-contain rounded-md bg-white/10"
-                  />
-                )}
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 leading-tight">{exp.title}</h3>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-base text-gray-300 mb-4">
-                  <span className="font-semibold text-green-500 truncate">{exp.company}</span>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4 flex-shrink-0" />
-                    <span className="truncate text-green-500">{exp.location}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4 flex-shrink-0" />
-                    <span className="truncate text-green-500">{exp.period}</span>
-                  </div>
+            <div className="flex items-center justify-center min-w-[4.5rem] min-h-[4.5rem] mb-4 sm:mb-0">
+              {exp.image && (
+                <img
+                  src={exp.image}
+                  alt={`${exp.company} logo`}
+                  className="w-16 h-16 lg:w-20 lg:h-20 object-contain rounded-md bg-white/10 group-hover:scale-105 group-hover:brightness-95 transition-transform duration-300"
+                />
+              )}
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 leading-tight">{exp.title}</h3>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-base text-gray-300 mb-4">
+                <span className="font-semibold text-green-500 truncate">{exp.company}</span>
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
+                  <span className="truncate text-green-500">{exp.location}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4 flex-shrink-0" />
+                  <span className="truncate text-green-500">{exp.period}</span>
                 </div>
               </div>
-            </div>
-            
-            <p className="text-base text-gray-300 mb-2 leading-relaxed">{exp.description}</p>
-            
-            <div>
-              {/* <h4 className="text-lg font-semibold text-white mb-4">Role & Responsibilities</h4> */}
+              <p className="text-base text-gray-300 mb-2 leading-relaxed">{exp.description}</p>
               <ul className="space-y-3">
                 {exp.responsibilities.map((resp, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-base text-gray-300">
