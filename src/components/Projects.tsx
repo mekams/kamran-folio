@@ -42,9 +42,9 @@ const Projects = () => {
     },
     {
       title: "Text Utility App",
-      description: "Collaborative task management application with real-time updates and team features.",
+      description: "Textu is a sleek and simple text utility app designed to quickly analyze, format, and transform your text with ease.",
       image: "../assets/pmocks/tutils.png",
-      technologies: ["Vue.js", "Firebase", "Tailwind"],
+      technologies: ["React.js", "JavaScript", "React-Router"],
       demoUrl: "https://textu.netlify.app/",
       githubUrl: "https://github.com/mekams/Text-Utils-1",
       featured: false
@@ -53,14 +53,14 @@ const Projects = () => {
       title: "Lung Cancer Prediction",
       description: "Collaborative task management application with real-time updates and team features.",
       image: "../assets/pmocks/lc.png",
-      technologies: ["Vue.js", "Firebase", "Tailwind"],
+      technologies: ["Jupyter Notebook", "Pandas", "Data Cleaning", "Kaggle", "Decision Tree", "Random Forest", "ANN", "Data Visualization", "Model Train -Scikit-learn"],
       demoUrl: "#",
       githubUrl: "https://github.com/mekams/Lung-Cancer-Prediction",
       featured: false
     },
     {
       title: "Integrated Project Management System",
-      description: "Collaborative task management application with real-time updates and team features.",
+      description: "Integrated Project Management System is a relational database solution designed using MySQL with 13+ normalized entities, reducing redundancy by 30%. It includes over 12 complex SQL queries to extract critical business insights such as top-spending customers and project tracking.",
       image: "../assets/pmocks/mysql.png",
       technologies: ["MySQL", "XAMPP", "phpMyAdmin", "SQL"],
       demoUrl: "#",
