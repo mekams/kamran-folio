@@ -44,7 +44,7 @@ const Education = () => {
         { name: "React.js", image: "/assets/react.png" },
         { name: "Micro Frontends", image: "/assets/mf.png" },
         { name: "Vue.js", image: "/assets/vuejs.svg" },
-        { name: "Next.Js", image: "/assets/nextjs.jpeg" },
+        { name: "Next.js", image: "/assets/nextjs.jpeg" },
       ],
       description: "Building dynamic, modular, and high-performance web interfaces with a focus on seamless user interactions and maintainable architecture."
     },
