@@ -41,7 +41,7 @@ const Education = () => {
       icon: <Code2 className="w-6 h-6 text-blue-400" />, // Lucide icon
       technologies: [
         { name: "JavaScript", image: "/assets/js.png" },
-        { name: "React", image: "/assets/react.png" },
+        { name: "React.js", image: "/assets/react.png" },
         { name: "Micro Frontends", image: "/assets/mf.png" },
         { name: "Vue.js", image: "/assets/vuejs.svg" },
         { name: "Next.Js", image: "/assets/nextjs.jpeg" },
