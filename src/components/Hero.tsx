@@ -44,10 +44,10 @@ const Hero = () => {
   };
 
   const handleDownloadCV = () => {
-    const cvUrl = '../assets/Kamran_IT_Resume.pdf';
+    const cvUrl = '/assets/Kamran_IT_Resume.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Kamran_IT_Resume.pdf';
+    link.download = 'Kamran_Mustafa_CV.pdf';
     link.click();
   };
 
