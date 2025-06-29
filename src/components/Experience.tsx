@@ -45,7 +45,7 @@ const Experience = () => {
       title: "Digital Marketing Associate",
       company: "Atulyam Infratech Pvt. Ltd.",
       location: "Onsite | Full-Time | India",
-      period: "Feb 2020 - Nov 2021",
+      period: "Dec 2018 - Jan 2020",
       description: "In my role as a Digital Marketing Associate, I focused on optimizing website performance, user experience, and SEO strategies.",
       responsibilities: [
         "Managed and maintained WordPress websites through theme customization, plugin integration, and HTML/CSS edits, improving page load speed by 30% and enhancing user experience and styling consistency across all pages.",
