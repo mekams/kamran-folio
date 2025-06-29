@@ -3,9 +3,9 @@
 A modern, fully responsive personal portfolio website built using cutting-edge web technologies to showcase your professional profile, work experience, skills, and projects.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/mekams/kamran-folio)
-![GitHub stars](https://img.shields.io/github/stars/your-username/portfolio-website?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/portfolio-website?style=social)
-![License](https://img.shields.io/github/license/your-username/portfolio-website)
+![GitHub stars](https://img.shields.io/github/stars/mekams/kamran-folio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mekams/kamran-folio?style=social)
+![License](https://img.shields.io/github/license/mekams/kamran-folio)
 
 ---
 
