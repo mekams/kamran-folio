@@ -55,11 +55,11 @@ const Hero = () => {
     <div className="hero-container h-[90vh] flex items-center justify-center p-4">
       <div className="hero-card bg-gray-800/40 backdrop-blur-sm rounded-3xl border border-gray-700/50 shadow-2xl p-8 max-w-sm w-full text-center">
         <div className="mb-2">
-          <div className="relative mx-auto mb-3 w-44 h-44">
+          <div className="relative mx-auto mb-3 w-64 h-64 flex items-center justify-center">
             <img 
-              src="../../assets/kamran_mustafa.jpg"
+              src="../kamran_mustafa.jpg"
               alt="Profile"
-              className="w-44 h-44 rounded-full object-cover border-4 border-green-500/30 shadow-xl animate-pulse transition-transform transform hover:scale-105 hover:shadow-2xl"
+              className="w-auto h-64 object-contain border-4 border-green-500/30 shadow-xl animate-pulse transition-transform hover:scale-105"
             />
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-lg mb-1">
