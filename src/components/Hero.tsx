@@ -7,7 +7,6 @@ const Hero = () => {
     () => [
       'Full-Stack Developer',
       'Software Engineer',
-      'AI Engineer',
       'Problem Solver',
       'Tech Enthusiast'
     ],
