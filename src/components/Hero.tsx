@@ -58,6 +58,7 @@ const Hero = () => {
             <img
               src="../kamran_mustafa.png"
               alt="Profile"
+              loading="lazy"
               className="w-full h-full object-cover rounded-3xl border-2 border-green-500/30 transition-transform hover:scale-105"
             />
           </div>
