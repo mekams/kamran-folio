@@ -5,7 +5,7 @@ const Experience = () => {
     {
       title: "Technical Customer Support Advisor",
       company: "Boots UK Ltd.",
-      location: "Onsite | Part-Time | Unied Kingdom",
+      location: "Onsite | Part-Time | United Kingdom",
       period: "Sep 2024 - Present",
       description: " I proactively managed inquiries and collaborated with internal teams to deliver timely solutions, ensuring high customer satisfaction.",
       responsibilities: [
