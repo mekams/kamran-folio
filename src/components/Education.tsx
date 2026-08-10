@@ -42,9 +42,9 @@ const Education = () => {
       technologies: [
         { name: "JavaScript", image: "/assets/js.png" },
         { name: "React.js", image: "/assets/react.png" },
-        { name: "Micro Frontends", image: "/assets/mf.png" },
-        { name: "Vue.js", image: "/assets/vuejs.svg" },
-        { name: "Next.js", image: "/assets/nextjs.jpeg" },
+        // { name: "Micro Frontends", image: "/assets/mf.png" },
+        // { name: "Vue.js", image: "/assets/vuejs.svg" },
+        // { name: "Next.js", image: "/assets/nextjs.jpeg" },
       ],
       description: "Building dynamic, modular, and high-performance web interfaces with a focus on seamless user interactions and maintainable architecture."
     },
@@ -81,7 +81,7 @@ const Education = () => {
       icon: <FlaskConical className="w-6 h-6 text-red-400" />, // Lucide icon
       technologies: [
         { name: "React Testing Library", image: "/assets/rtl.png" },
-        { name: "Jest", image: "/assets/jt.png" },
+        // { name: "Jest", image: "/assets/jt.png" },
         { name: "Jira", image: "/assets/jr.jpeg" },
         { name: "Agile & Scrum Workflows", image: "/assets/asw.jpg" }
       ],
@@ -93,12 +93,12 @@ const Education = () => {
       technologies: [
         { name: "GitHub", image: "/assets/git.png" },
         { name: "Docker", image: "/assets/doc.png" },
-        { name: "Kubernetes", image: "/assets/kb.png" },
+        // { name: "Kubernetes", image: "/assets/kb.png" },
         { name: "AWS", image: "/assets/aws.png" },
         { name: "Vercel", image: "/assets/vl.png" },
         { name: "Netlify", image: "/assets/ny.png" },
         { name: "CI/CD", image: "/assets/cid.webp" },
-        { name: "Jenkins", image: "/assets/jk.png" },
+        // { name: "Jenkins", image: "/assets/jk.png" },
       ],
       description: "Working with cloud platforms and DevOps tools to support deployment, automation, and continuous integration processes."
     },
