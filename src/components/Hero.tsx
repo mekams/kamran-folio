@@ -131,15 +131,14 @@ const Hero = () => {
               kamraneg@gmail.com
             </button>
           </div>
-          <div className="flex items-center justify-center gap-2 text-gray-300">
+          {/* <div className="flex items-center justify-center gap-2 text-gray-300">
             <Phone className="w-3 h-3 text-slate-400" />
             <button 
               onClick={handleCall}
               className="hover:text-green-400 transition-colors text-xs"
             >
-              +44 (786) 912 8971
             </button>
-          </div>
+          </div> */}
         </div>
         
         <div className="flex flex-row gap-2 justify-center">

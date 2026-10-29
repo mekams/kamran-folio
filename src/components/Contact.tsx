@@ -81,15 +81,15 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <div className="p-3 bg-gray-600/20 rounded-full">
                   <Phone className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white">+44 (786) 912 8971</p>
+                  <p className="text-white"></p>
                 </div>
-              </div>
+              </div> */}
               
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-gray-600/20 rounded-full">
